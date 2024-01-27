@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Animation</title>
+    <style>
+        /* Štýly pre tlačidlo */
+        #mojeTlacidlo {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            cursor: not-allowed;
+            /* Zakáže kliknutie na tlačidlo */
+            transition: transform 0.3s ease;
+            /* Animácia pri hoveri */
+        }
+
+        /* Štýly pre hover efekt */
+        #mojeTlacidlo:hover {
+            transform: translate()
+                    /* Nahodzý smer vodorovne 
+                    calc(1000px * (Math.random() - 0.5)),*/
+                    /* Nahodzý smer zvisle 
+                    calc(100px * (Math.random() - 0.5)))*/
+        }
+    </style>
+</head>
+
+<body>
+    <button id="mojeTlacidlo">Klikni ma!</button>
+
+    <script>
+        // Získaj odkaz na tlačidlo
+        const tlacidlo = document.querySelector("#mojeTlacidlo");
+
+        // Pridaj udalosť "mouseenter" na tlačidlo
+        tlacidlo.addEventListener("mouseenter", () => {
+            // Posuň tlačidlo z pod myši nahodzým smerom
+            tlacidlo.style.transform = `
+                translate(
+                    ${1000 * (Math.random() - 0.5)}px,
+                    ${1000 * (Math.random() - 0.5)}px
+                )
+            `;
+        });
+    </script>
+</body>
+
+</html>

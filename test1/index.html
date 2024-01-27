@@ -5,8 +5,23 @@
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+
+
+<a href="leo.html">This is a paragraph.</a>
+
+<h6>This is a Heading</h6>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a paragraph.</i>
+
+
+<button id="openNewPage" style="color: royalblue;">Otvoriť novú stránku</button>
+
+    <script>
+        // Funkcia, ktorá sa spustí po kliknutí na tlačidlo
+        document.getElementById("openNewPage").addEventListener("click", function() {
+            // Otvoríme nové okno s URL adresou
+            window.open("leo.html", "_self");
+        });
+    </script>
 
 </body>
 </html>

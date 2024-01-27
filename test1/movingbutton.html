@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styl tlačidla */
+        #movingButton {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            transition: all 0.3s ease; /* Plynulý prechod */
+        }
+    </style>
+</head>
+<body>
+    <button id="movingButton">Presúvaj ma!</button>
+
+    <script>
+        // Získame odkaz na tlačidlo
+        const button = document.getElementById("movingButton");
+
+        // Funkcia, ktorá sa spustí pri pohybe myši
+        window.addEventListener("mousemove", (event) => {
+            // Získame súradnice myši
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // Nastavíme novú pozíciu tlačidla
+            button.style.left = mouseX + "px";
+            button.style.top = mouseY + "px";
+        });
+    </script>
+</body>
+</html>
